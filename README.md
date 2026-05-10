@@ -251,7 +251,8 @@ This project was built to:
 Add screenshots here after building:
 
 - Home Page
-- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3e755f01-390c-4bd7-aa6f-00ce5604a27f" />
+- <img width="1919" height="862" alt="image" src="https://github.com/user-attachments/assets/1dbcb052-f3c6-4dc5-b12d-338526098eef" />
+
 
 
 - Dashboard
