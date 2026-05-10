@@ -192,7 +192,7 @@ AI-Interview-Ecosystem/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/AI-Interview-Ecosystem.git
+git clone https://github.com/rohitrajput21250/ai_interview_prep.git
 ```
 
 ---
@@ -249,11 +249,29 @@ This project was built to:
 # 📸 Screenshots
 
 Add screenshots here after building:
+
+- Home Page
+- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3e755f01-390c-4bd7-aa6f-00ce5604a27f" />
+
+
 - Dashboard
+- <img width="1919" height="819" alt="image" src="https://github.com/user-attachments/assets/16a2efae-53ab-4fd8-8e3a-e83f7c5e21b6" />
+
+
 - AI Interview Screen
+  <img width="1916" height="876" alt="image" src="https://github.com/user-attachments/assets/661d8047-a9ec-4616-b32d-254a4af20a01" />
+
+  
 - Resume Analyzer
+  <img width="1919" height="856" alt="image" src="https://github.com/user-attachments/assets/6ccda3ac-db51-4fd2-a746-3c34958fd3e7" />
+
+  
+  
 - Coding Platform
-- Analytics Page
+  <img width="1919" height="876" alt="image" src="https://github.com/user-attachments/assets/0a2c6e5b-2c32-4a0c-ab12-a55681d22b8d" />
+
+  
+  
 
 ---
 
