@@ -215,7 +215,9 @@ Create a `.env` file in the frontend root:
 VITE_API_BASE_URL=https://your-backend-domain.com
 ```
 
-For local development, if `VITE_API_BASE_URL` is not set, auth requests use `http://localhost:5000`.
+For local development, if `VITE_API_BASE_URL` is not set, API requests use `http://localhost:5000`.
+In production, if `VITE_API_BASE_URL` is not set, API requests use same-origin `/api/...` paths on the deployed domain.
+If your backend is on a different domain, set `VITE_API_BASE_URL` to that backend URL.
 
 ---
 

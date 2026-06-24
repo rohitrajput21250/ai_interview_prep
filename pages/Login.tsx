@@ -3,10 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BrainCircuit, Mail, Lock, ArrowRight } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { buildApiUrl } from '../utils/api';
 
 export default function Login() {
-  const defaultApiBaseUrl = import.meta.env.DEV ? 'http://localhost:5000' : '';
-  const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || defaultApiBaseUrl).replace(/\/+$/, '');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -20,7 +19,7 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      const res = await fetch(`${apiBaseUrl}/api/auth/login`, {
+      const res = await fetch(buildApiUrl('/api/auth/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
