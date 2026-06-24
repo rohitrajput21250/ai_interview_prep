@@ -207,6 +207,18 @@ npm run dev
 
 ---
 
+## Frontend Environment Variables
+
+Create a `.env` file in the frontend root:
+
+```env
+VITE_API_BASE_URL=https://your-backend-domain.com
+```
+
+For local development, if `VITE_API_BASE_URL` is not set, auth requests use `http://localhost:5000`.
+
+---
+
 ## Install Backend
 
 ```bash

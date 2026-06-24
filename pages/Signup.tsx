@@ -5,6 +5,8 @@ import { BrainCircuit, Mail, Lock, User, Target, ArrowRight } from 'lucide-react
 import { useAuth } from '../contexts/AuthContext';
 
 export default function Signup() {
+  const defaultApiBaseUrl = import.meta.env.DEV ? 'http://localhost:5000' : '';
+  const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || defaultApiBaseUrl).replace(/\/+$/, '');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,7 +22,7 @@ export default function Signup() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://localhost:5000/api/auth/signup', {
+      const res = await fetch(`${apiBaseUrl}/api/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password, targetRole }),
