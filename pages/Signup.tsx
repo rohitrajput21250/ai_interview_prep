@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BrainCircuit, Mail, Lock, User, Target, ArrowRight } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { getApiBaseUrl } from '../utils/api';
 
 export default function Signup() {
   const [name, setName] = useState('');
@@ -20,14 +21,14 @@ export default function Signup() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://localhost:5000/api/auth/signup', {
+      const res = await fetch(`${getApiBaseUrl()}/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password, targetRole }),
       });
-      
+
       const data = await res.json();
-      
+
       if (!res.ok) {
         throw new Error(data.message || 'Signup failed');
       }
@@ -45,7 +46,7 @@ export default function Signup() {
     <div className="min-h-screen bg-[#050505] flex flex-col justify-center py-12 sm:px-6 lg:px-8 selection:bg-indigo-500/30 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 via-[#050505] to-[#050505] pointer-events-none"></div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="sm:mx-auto sm:w-full sm:max-w-md relative z-10"
@@ -64,7 +65,7 @@ export default function Signup() {
         </p>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -77,7 +78,7 @@ export default function Signup() {
                 {error}
               </div>
             )}
-            
+
             <div>
               <label className="block text-sm font-medium text-white/80">Full Name</label>
               <div className="mt-2 relative">

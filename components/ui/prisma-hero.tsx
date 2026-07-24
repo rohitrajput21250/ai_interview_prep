@@ -147,9 +147,9 @@ const PrismaHero = () => {
                 className="text-xs text-primary/70 sm:text-sm md:text-base text-gray-200"
                 style={{ lineHeight: 1.2 }}
               >
-                Prisma is a worldwide network of visual artists, filmmakers and storytellers bound not by place, status or labels but by passion and hunger to unlock potential through our unique perspectives.
-              </motion.p>
+                Prisma is an AI-powered interview and learning ecosystem built for students, developers, and ambitious learners who want to master technical skills, crack interviews, and grow faster through personalized AI-driven guidance, real-time assessments, and intelligent learning experiences.
 
+              </motion.p>
               <Link to="/dashboard">
                 <motion.button
                   initial={{ y: 20, opacity: 0 }}
